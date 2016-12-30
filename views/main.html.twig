@@ -1,0 +1,78 @@
+<!doctype html>
+<html lang="{{ 'langcode'|trans }}">
+<head>
+    <meta charset="utf-8">
+    <meta name="keywords" content="piotr, macha, programmer, developer, php, symfony developer, html, css">
+    <meta name="description" content="{{ 'site_description'|trans }}">
+    <title>Piotr Macha</title>
+    <link rel="stylesheet" href="https://fonts.googleapis.com/css?family=Arima+Madurai:300,400&amp;subset=latin-ext">
+    <link rel="stylesheet" href="/assets/main.css">
+</head>
+<body>
+    <header>
+        <section>
+            <h1>Piotr Macha</h1>
+            <p>
+                {{ 'about'|trans }}
+            </p>
+            <address>
+                <ul>
+                    <li id="email">
+                        me@piotrmacha.pl
+                    </li>
+                    <li>
+                        <a href="https://github.com/Thelleo">GitHub.com/Thelleo</a>
+                    </li>
+                </ul>
+            </address>
+        </section>
+        <ul>
+            <li>
+                <a href="/en"><img src="/assets/en.png" alt="English Language"></a>
+            </li>
+            <li>
+                <a href="/pl"><img src="/assets/pl.png" alt="Język polski"></a>
+            </li>
+        </ul>
+    </header>
+    <main>
+        <article>
+            <h2>{{ 'projects'|trans }}</h2>
+            <ul>
+                {% spaceless %}
+                {% for project in projects %}
+                    <li>
+                        <ul>
+                            {% for technology in project.technologies %}
+                                <li>{{ technology }}</li>
+                            {% endfor %}
+                        </ul>
+                        <h3>{{ project.title }}</h3>
+                        <span><a href="http://{{ project.url }}">{{ project.url }}</a></span>
+                        <p>
+                            {{ project.description }}
+                        </p>
+                    </li>
+                {% endfor %}
+                {% endspaceless %}
+            </ul>
+        </article>
+        <aside>
+            <h2>{{ 'skills'|trans }}</h2>
+            <ul>
+                {% spaceless %}
+                {% for skill in skills %}
+                    <li>
+                        {{ skill }}
+                    </li>
+                {% endfor %}
+                {% endspaceless %}
+            </ul>
+        </aside>
+    </main>
+    <footer>
+        {{ 'on_github'|trans }}: <a href="http://github.com/Thelleo/piotrmacha.pl">GitHub</a><br>
+        {{ 'uses_cookies'|trans }}
+    </footer>
+</body>
+</html>
