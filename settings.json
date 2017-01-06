@@ -6,7 +6,7 @@
                 "pl": "World of Equestria"
             },
             "url": "worldofequestria.pl",
-            "technologies": ["Symfony 2", "crossbar.io"],
+            "technologies": ["PHP", "Symfony 2", "crossbar.io"],
             "description": {
                 "en": "Social site for polish bronies with realtime chat built on top of crossbar.io",
                 "pl": "Serwis społecznościowy dla polskich bronies z czatem realtime opartym o crossbar.io"

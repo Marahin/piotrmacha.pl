@@ -2,6 +2,11 @@
 require_once(__DIR__.'/../init.php');
 $settings = json_decode(file_get_contents('../settings.json'), true);
 
+$serializeSkillFilter = new Twig_SimpleFilter('technologySerialize', function ($string) {
+    return strtolower(str_replace(['.', ' ', '/'], '', $string));
+});
+$app['twig']->addFilter($serializeSkillFilter);
+
 $app->get('/', function() use($app, $settings) {
     $projects = $settings['projects'];
 

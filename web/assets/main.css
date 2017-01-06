@@ -6,7 +6,7 @@ html, body, h1, h2, h3, ul, li, p {
 }
 
 body {
-    font: 16px 'Arima Madurai', Arial, sans-serif;
+    font: 16px 'Open Sans', Arial, sans-serif;
     width: 960px;
     margin: 20px auto;
 }
@@ -41,7 +41,7 @@ header > ul {
 }
 
 header p {
-    margin: 10px 0;
+    margin: 20px 0;
 }
 
 address {
@@ -57,7 +57,7 @@ address li {
 }
 
 main {
-    margin-top: 20px;
+    margin-top: 40px;
 }
 
 aside {
@@ -75,7 +75,7 @@ aside li, main > article > ul > li > ul > li {
 }
 
 h2 {
-    margin-bottom: 10px;
+    margin-bottom: 20px;
 }
 
 h3 {
@@ -88,11 +88,11 @@ main > article {
 
 main > article > ul > li {
     box-sizing: border-box;
-    padding: 10px;
+    padding: 20px;
     border-radius: 5px;
     border: 1px solid #ccc;
     width: 90%;
-    margin-bottom: 10px;;
+    margin-bottom: 20px;
 }
 
 main > article > ul > li > ul {
@@ -107,5 +107,21 @@ footer {
     font-size: 12px;
     color: #666;
     line-height: 1.2 !important;
-    margin-top: 20px;
+    margin-top: 40px;
+}
+
+.technology-php {
+    background: #757ab4;
+    color: #fff;
+    font-weight: bold;
+}
+.technology-symfony23, .technology-symfony2, .technology-symfony3 {
+    background: #000;
+    color: #fff;
+    font-weight: bold;
+}
+.technology-crossbario {
+    color: #333;
+    background: #ffdd00;
+    font-weight: bold;
 }

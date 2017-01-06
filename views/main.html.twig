@@ -5,7 +5,7 @@
     <meta name="keywords" content="piotr, macha, programmer, developer, php, symfony developer, html, css">
     <meta name="description" content="{{ 'site_description'|trans }}">
     <title>Piotr Macha</title>
-    <link rel="stylesheet" href="https://fonts.googleapis.com/css?family=Arima+Madurai:300,400&amp;subset=latin-ext">
+    <link rel="stylesheet" href="https://fonts.googleapis.com/css?family=Open+Sans:300,400&amp;subset=latin-ext">
     <link rel="stylesheet" href="/assets/main.css">
 </head>
 <body>
@@ -47,7 +47,7 @@
                     <li>
                         <ul>
                             {% for technology in project.technologies %}
-                                <li>{{ technology }}</li>
+                                <li class="technology-{{ technology|technologySerialize }}">{{ technology }}</li>
                             {% endfor %}
                         </ul>
                         <h3>{{ project.title }}</h3>
@@ -65,7 +65,7 @@
             <ul>
                 {% spaceless %}
                 {% for skill in skills %}
-                    <li>
+                    <li class="technology-{{ skill|technologySerialize }}">
                         {{ skill }}
                     </li>
                 {% endfor %}
