@@ -38,7 +38,7 @@
             "image": "woe-old.png",
             "technologies": ["PHP", "Kohana Framework", "socket.io"],
             "description": {
-                "en": "Browser role playing game for polish bronies with realtime chat based on socket.io. Closed at 2015.",
+                "en": "Browser role playing game for polish bronies with realtime chat based on socket.io. Closed in 2015.",
                 "pl": "Gra przeglądarkowa RPG dla polskich bronies z czatem realtime opartym o crossbar.io. Zamknięta w 2015r."
             }
         }
