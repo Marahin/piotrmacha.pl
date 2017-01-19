@@ -16,6 +16,11 @@ $app->get('/', function() use($app, $settings) {
                 $project[$key] = $value[$app['translator']->getLocale()];
             }
         }
+        $words = explode(' ', $project['title']);
+        $words = array_map(function($word) {
+            return $word{0};
+        }, $words);
+        $project['icontext'] = join('', $words);
         $projects[$pkey] = $project;
     }
 

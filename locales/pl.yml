@@ -1,6 +1,5 @@
 langcode: pl-PL
-projects: Projekty
-skills: Umiejętności
-about: Cześć! Jestem programistą i hobbystą matematyki. Moim głównym polem działania jest webdev w Symfony.
+site_description: Piotr Macha — PHP Backend Developer
+inactive: nieaktywna
 on_github: Źródło tej strony jest dostępne na
 uses_cookies: Ta strona używa ciasteczek, aby przechowywać informację o języku i w celu tworzenia statystyk ruchu. Jeżeli nie życzysz sobie tego, możesz wyłączyć ciasteczka w ustawieniach przeglądarki, ale pamiętaj, że wtedy nie będziesz mógł zmienić języka strony.

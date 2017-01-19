@@ -5,30 +5,21 @@
     <meta name="keywords" content="piotr, macha, programmer, developer, php, symfony developer, html, css">
     <meta name="description" content="{{ 'site_description'|trans }}">
     <title>Piotr Macha</title>
-    <link rel="stylesheet" href="https://fonts.googleapis.com/css?family=Open+Sans:300,400&amp;subset=latin-ext">
+    <link rel="stylesheet" href="https://fonts.googleapis.com/css?family=Open+Sans:300,400,700&amp;subset=latin-ext">
     <link rel="stylesheet" href="/assets/main.css">
 </head>
 <body>
     <header>
-        <section>
-            <h1>Piotr Macha</h1>
-            <p>
-                {{ 'about'|trans }}
-            </p>
-            <address>
-                <ul>
-                    <li id="email">
-                        me@piotrmacha.pl
-                    </li>
-                    <li>
-                        <a href="http://blog.piotrmacha.pl">Blog</a>
-                    </li>
-                    <li>
-                        <a href="https://github.com/Thelleo">GitHub</a>
-                    </li>
-                </ul>
-            </address>
-        </section>
+        <h1>
+            {% spaceless %}
+            <span class="header-line">41</span>
+            <span class="header-code">$me = $backend->
+                <span class="header-method">getDeveloper</span>(<span class="header-string">'Piotr Macha'</span>);
+            </span> <br>
+            <span class="header-line">42</span>
+            <span class="header-code"><span class="header-control">return</span> $me-><span class="header-method">getPortfolio</span>();</span>
+            {% endspaceless %}
+        </h1>
         <ul>
             <li>
                 <a href="/en"><img src="/assets/en.png" alt="English Language"></a>
@@ -39,43 +30,66 @@
         </ul>
     </header>
     <main>
+        <aside>
+            <section>
+                <address>
+                    <ul>
+                        <li id="email">
+                            <i class="fa fa-envelope" aria-hidden="true"></i>
+                            <a href="mailto:me@piotrmacha.pl">me@piotrmacha.pl</a>
+                        </li>
+                        <li>
+                            <i class="fa fa-rss" aria-hidden="true"></i>
+                            <a href="http://blog.piotrmacha.pl">blog.piotrmacha.pl</a>
+                        </li>
+                        <li>
+                            <i class="fa fa-github" aria-hidden="true"></i>
+                            <a href="https://github.com/Thelleo">github.com/thelleo</a>
+                        </li>
+                    </ul>
+                </address>
+            </section>
+        </aside>
         <article>
-            <h2>{{ 'projects'|trans }}</h2>
             <ul>
                 {% spaceless %}
                 {% for project in projects %}
                     <li>
-                        <ul>
-                            {% for technology in project.technologies %}
-                                <li class="technology-{{ technology|technologySerialize }}">{{ technology }}</li>
-                            {% endfor %}
-                        </ul>
-                        <h3>{{ project.title }}</h3>
-                        <span><a href="http://{{ project.url }}">{{ project.url }}</a></span>
-                        <p>
-                            {{ project.description }}
-                        </p>
+                        <aside>
+                            {% if project.image %}
+                                <img src="/assets/projects/{{ project.image }}">
+                            {% else %}
+                                <span>{{ project.icontext }}</span>
+                            {% endif %}
+                        </aside>
+                        <section>
+                            <ul>
+                                {% for technology in project.technologies %}
+                                    <li class="technology-{{ technology|technologySerialize }}">{{ technology }}</li>
+                                {% endfor %}
+                            </ul>
+                            <h3>{{ project.title }} <span>({{ project.date }})</span></h3>
+                            <span>
+                                {% if project.url %}
+                                    <a href="http://{{ project.url }}">{{ project.url }}</a>
+                                {% else %}
+                                    {{ 'inactive'|trans }}
+                                {% endif %}
+                            </span>
+                            <p>
+                                {{ project.description }}
+                            </p>
+                        </section>
                     </li>
                 {% endfor %}
                 {% endspaceless %}
             </ul>
         </article>
-        <aside>
-            <h2>{{ 'skills'|trans }}</h2>
-            <ul>
-                {% spaceless %}
-                {% for skill in skills %}
-                    <li class="technology-{{ skill|technologySerialize }}">
-                        {{ skill }}
-                    </li>
-                {% endfor %}
-                {% endspaceless %}
-            </ul>
-        </aside>
     </main>
     <footer>
         {{ 'on_github'|trans }}: <a href="http://github.com/Thelleo/piotrmacha.pl">GitHub</a><br>
         {{ 'uses_cookies'|trans }}
     </footer>
+    <script src="https://use.fontawesome.com/f8d8f14ced.js"></script>
 </body>
 </html>

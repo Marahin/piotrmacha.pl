@@ -2,14 +2,44 @@
     "projects": [
         {
             "title": {
+                "en": "Ines Rychlewska",
+                "pl": "Ines Rychlewska"
+            },
+            "url": "139.59.156.142:9000",
+            "date": "2017, in development",
+            "image": false,
+            "technologies": ["PHP", "Silex", "HTML/CSS/JS"],
+            "description": {
+                "en": "Portfolio for polish photographer with dedicated photo and content manegement system.",
+                "pl": "Portfolio polskiej fotograf z dedykowanym systemem do zarządzania zdjęciami i treścią."
+            }
+        },
+        {
+            "title": {
+                "en": "World of Equestria NG",
+                "pl": "World of Equestria NG"
+            },
+            "url": "worldofequestria.pl",
+            "date": "2016",
+            "image": "woe.png",
+            "technologies": ["PHP", "Symfony 2", "crossbar.io"],
+            "description": {
+                "en": "New version of World of Equestria, social site for polish bronies with realtime chat built on top of crossbar.io",
+                "pl": "Nowa wersja World of Equestria jako serwis społecznościowy dla polskich bronies z czatem realtime opartym o crossbar.io"
+            }
+        },
+        {
+            "title": {
                 "en": "World of Equestria",
                 "pl": "World of Equestria"
             },
-            "url": "worldofequestria.pl",
-            "technologies": ["PHP", "Symfony 2", "crossbar.io"],
+            "url": null,
+            "date": "2013 — 2015",
+            "image": "woe-old.png",
+            "technologies": ["PHP", "Kohana Framework", "socket.io"],
             "description": {
-                "en": "Social site for polish bronies with realtime chat built on top of crossbar.io",
-                "pl": "Serwis społecznościowy dla polskich bronies z czatem realtime opartym o crossbar.io"
+                "en": "Browser role playing game for polish bronies with realtime chat based on socket.io. Closed at 2015.",
+                "pl": "Gra przeglądarkowa RPG dla polskich bronies z czatem realtime opartym o crossbar.io. Zamknięta w 2015r."
             }
         }
     ],

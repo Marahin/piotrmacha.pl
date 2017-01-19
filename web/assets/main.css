@@ -35,13 +35,25 @@ header > *, main > * {
     vertical-align: top;
 }
 
-header li, aside li, main > article > ul > li > ul > li {
+header li, main > article > ul > li > section > ul > li {
     display: inline-block;
+}
+
+main > aside li {
+    margin-bottom: 10px;
 }
 
 header > ul {
     text-align: right;
     width: 100px;
+}
+
+header > ul > li {
+    opacity: 0.4;
+}
+
+header > ul > li:hover {
+    opacity: 1;
 }
 
 header p {
@@ -52,30 +64,63 @@ address {
     font-style: normal;
 }
 
-address li {
-    margin-right: 40px;
-}
-
-#email {
-    font-weight: bold;
+main > aside .fa {
+    width: 20px;
 }
 
 main {
-    margin-top: 40px;
+    margin-top: 60px;
 }
 
-aside {
-    width: 300px;
+main > aside {
+    width: 200px;
 }
 
-aside li, main > article > ul > li > ul > li {
+main > article > ul > li > section > ul > li {
     background: #ddd;
     border-radius: 5px;
     padding: 5px;
     font-size: 12px;
-    margin-right: 5px;
+    margin-left: 5px;
     margin-bottom: 5px;
     color: #333;
+}
+
+h1 {
+    font-size: 18px;
+    background: #333;
+    padding: 5px 0;
+    display: inline-block;
+}
+
+h1 > span {
+    padding: 3px 5px;
+    line-height: 1.5;
+    font-family: monospace;
+    font-weight: normal;
+}
+
+h1 .header-control {
+    color: #f92650;
+}
+
+h1 .header-line {
+    color: #999;
+    background: #222;
+    padding: 7px 10px;
+}
+
+h1 .header-code {
+    background: #333;
+    color: #fff;
+}
+
+h1 .header-string {
+    color: #b78686;
+}
+
+h1 .header-method {
+    color: #94ccfd;
 }
 
 h2 {
@@ -93,24 +138,60 @@ main > article {
 main > article > ul > li {
     box-sizing: border-box;
     padding: 20px;
-    border-radius: 5px;
-    border: 1px solid #ccc;
-    width: 90%;
-    margin-bottom: 20px;
+    padding-top: 0;
+    padding-right: 0;
+    display: table;
+    width: 100%;
+    margin-bottom: 40px;
 }
 
-main > article > ul > li > ul {
+main > article > ul > li > * {
+    display: table-cell;
+    vertical-align: top;
+}
+
+main > article > ul > li > aside {
+    width: 64px;
+}
+
+main > article > ul > li > aside img {
+    width: 64px;
+}
+
+main > article > ul > li > aside span {
+    font-weight: bold;
+    font-size: 48px;
+}
+
+main > article > ul > li > section {
+    padding-left: 20px;
+}
+
+main > article > ul > li > section > span {
+    color: #999;
+}
+
+main > article > ul > li > section h3 > span {
+    font-weight: normal;
+    margin-left: 20px;
+    font-size: 14px;
+    color: #666;
+}
+
+main > article > ul > li > section > ul {
     float: right;
 }
 
 main > article p {
     margin-top: 10px;
+    line-height: 1.5;
 }
 
 footer {
     font-size: 12px;
     color: #666;
-    line-height: 1.2 !important;
+    opacity: 0.7;
+    line-height: 1.5 !important;
     margin-top: 40px;
 }
 
@@ -119,7 +200,7 @@ footer {
     color: #fff;
     font-weight: bold;
 }
-.technology-symfony23, .technology-symfony2, .technology-symfony3 {
+.technology-symfony23, .technology-silex, .technology-symfony2, .technology-symfony3 {
     background: #000;
     color: #fff;
     font-weight: bold;
