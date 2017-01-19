@@ -10,7 +10,7 @@
             "image": false,
             "technologies": ["PHP", "Silex", "HTML/CSS/JS"],
             "description": {
-                "en": "Portfolio for polish photographer with dedicated photo and content manegement system.",
+                "en": "Polish photographer portfolio with dedicated photo and content manegement system.",
                 "pl": "Portfolio polskiej fotograf z dedykowanym systemem do zarządzania zdjęciami i treścią."
             }
         },
