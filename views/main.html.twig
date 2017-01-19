@@ -17,7 +17,9 @@
                 <span class="header-method">getDeveloper</span>(<span class="header-string">'Piotr Macha'</span>);
             </span> <br>
             <span class="header-line">42</span>
-            <span class="header-code"><span class="header-control">return</span> $me-><span class="header-method">getPortfolio</span>();</span>
+            <span class="header-code">
+                <span class="header-control">return</span> $me-><span class="header-method">getPortfolio</span>();<span id="header-cursor" style="opacity: 1;">│</span>
+            </span>
             {% endspaceless %}
         </h1>
         <ul>
@@ -91,5 +93,14 @@
         {{ 'uses_cookies'|trans }}
     </footer>
     <script src="https://use.fontawesome.com/f8d8f14ced.js"></script>
+    <script>
+        (function() {
+            function blinkTextCursor() {
+                var cursor = document.getElementById('header-cursor');
+                cursor.style.opacity = parseInt(cursor.style.opacity) ^ 1;
+            }
+            setInterval(blinkTextCursor, 400);
+        })();
+    </script>
 </body>
 </html>
